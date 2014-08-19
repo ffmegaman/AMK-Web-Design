@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" href="module.css">
     <link rel="stylesheet" type="text/css" href="state.css">
     <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="./jquery-ui-1.11.1.custom/jquery-ui.min.css">
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="./jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+    <script src="custom.js"></script>
   </head>
   <body>
     <div class="nav container">
@@ -28,6 +32,16 @@
     <h2>contactus@amkdesign.com</h2>
     <fieldset>
       <legend>Sign Up Here!</legend>
+      <img class="seo hidden" src="images/SEO.jpg"/>
+      <img class="logodesign hidden" src="images/LogoDesign.jpg"/>
+      <img class="webdesign hidden" src="images/WebDesign.jpg"/>
+      <label>Service
+      <select id="service-selection">
+        <option id="seo-select">SEO</option>
+        <option id="logodesign-select">Logo Design</option>
+        <option id="webdesign-select">Web Design</option>
+      </select>
+      </label><br />
       <label for="name">Name:</br>
       <input type="text" id="name" /></label><br />
       <div id="feedback"></div>

@@ -2,17 +2,13 @@ $(function() {
   $('.collapsible').accordion();
   $('#service-selection').selectmenu();
 
-  $('.hidden').hide();
-
-  $('select').on('click', 'option', function() {
-    if ($(this).attr('id') == 'seo-select'){
-      $('.seo').show();
-    }
-    else if ($(this).attr('id') == 'logodesign-select'){
-      $('.logodesign').show();
-    }
-    else {
-      $('.webdesign').show();
-    }
-  })
-})
+  // This IIFE toggles orange shadow on mouseover of h1,h2,h3
+  (function() {
+    $('body').on('mouseenter', 'h1, h2, h3', function() {
+      $(this).addClass('mouseover');
+    });
+    $('body').on('mouseleave', 'h1, h2, h3', function() {
+      $(this).removeClass('mouseover');
+    });
+  }());
+});

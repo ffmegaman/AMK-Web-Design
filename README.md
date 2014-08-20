@@ -23,5 +23,9 @@ Object Modeling:
 Challenges:
 Our biggest challenges were the SMACSS requirements and making sure that were following correct naming conventions and styling.  We also learned that the Module CSS style sheet needed to be untilzed for styling of all the smaller component parts.  We also solved for the redundancy of classes we created by formatting by element. This indicates that we should have further planned the layout before starting to code. We thought we had done enough planning but in hindsight we had not.
 
+#### New Updates
+
+Austin and Philip added additional effects with jQuery and jQuery-UI to the website. Original JS Code was also changed to use where possible.
+
 
 

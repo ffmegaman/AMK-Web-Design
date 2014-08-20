@@ -1,25 +1,30 @@
-function checkname() {                                          // Declare function
-  var elMsg = document.getElementById("feedback");              // Get feedback element
-  if (this.value.length < 2) {                                  // If name too short
-    elMsg.textContent = "Name must be 2 characters or more";    // Set msg
-  } else {                                                      // Otherwise
-    elMsg.textContent = "Your name has been added to our records.";                                     // Clear msg
-  }
-}
+$(function(){
 
-var elname = document.getElementById("name");                   // Get name input
-// When it loses focus call checkname()
-elname.addEventListener("blur", checkname, false);
-
-function checkemail(){
-  var email = document.getElementById("emailfeedback");
-  if (this.value.length < 2) {
-    email.textContent = "You must submit a valid e-mail address";
+  function checkname() {                                          // Declare function
+    var elMsg = $("#feedback");              // Get feedback element
+    if (this.value.length < 2) {                                  // If name too short
+      elMsg.text("Name must be 2 characters or more");    // Set msg
+    } else {                                                      // Otherwise
+      elMsg.text("Your name has been added to our records.");                                     // Clear msg
+    }
   }
-  else{
-    email.textContent = "Your e-mail has been added to our records";
-  }
-}
 
-var elemail = document.getElementById("email");
-elemail.addEventListener("blur", checkemail, false);
+  var elname = $("#name");                   // Get name input
+  // When it loses focus call checkname()
+  elname.on("blur", checkname);
+
+  function checkemail(){
+    var email = $("#emailfeedback");
+    if (this.value.length < 2) {
+      email.text("You must submit a valid e-mail address");
+    }
+    else{
+      email.text("Your e-mail has been added to our records");
+    }
+  }
+
+  var elemail = $("#email");
+  elemail.on("blur", checkemail);
+
+});
+

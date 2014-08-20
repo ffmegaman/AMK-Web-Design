@@ -36,7 +36,6 @@ h2{
 img {
   border: 2em;
   width: 10em;
-  padding-left: 2em;
   float: right;
 }
 
@@ -54,4 +53,8 @@ p{
   font-size: 24px;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.mouseover {
+  text-shadow: 2px 2px #FFA500;
 }
